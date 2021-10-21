@@ -1,0 +1,393 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/Users/edoardobiasio/dev/cengine",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-10-18 20:16:55",
+            "filesum": 54,
+            "codesum": 6852,
+            "commentsum": 1521,
+            "blanksum": 1113,
+            "statistics": {
+                ".h": {
+                    "code": 6036,
+                    "comment": 1521,
+                    "blank": 934
+                },
+                ".c": {
+                    "code": 737,
+                    "comment": 0,
+                    "blank": 162
+                },
+                ".vert": {
+                    "code": 12,
+                    "comment": 0,
+                    "blank": 3
+                },
+                "": {
+                    "code": 59,
+                    "comment": 0,
+                    "blank": 11
+                },
+                ".frag": {
+                    "code": 8,
+                    "comment": 0,
+                    "blank": 3
+                }
+            },
+            "filelist": [
+                {
+                    "filename": "assets/onion.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "assets/shaders/simple.frag"
+                },
+                {
+                    "blank": 3,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "assets/shaders/simple.vert"
+                },
+                {
+                    "filename": "build/debug/cengine",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/camera.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/main.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/math/vec.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/mesh.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/shaders/model_shader.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/shaders/shader.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/stb.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/texture.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/utils/file.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/utils/logging.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/utils/memory.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/debug/obj/vao.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/main.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/math/vec.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/mesh.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/shaders/model_shader.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/shaders/shader.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/stb.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/texture.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/utils/file.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/utils/logging.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/utils/memory.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build/release/obj/vao.o",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 861,
+                    "code": 5768,
+                    "comment": 1520,
+                    "filename": "include/stb/stb_image.h"
+                },
+                {
+                    "blank": 11,
+                    "code": 59,
+                    "comment": 0,
+                    "filename": "Makefile"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "src/camera.c"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src/camera.h"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "src/color.h"
+                },
+                {
+                    "blank": 6,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "src/includes.h"
+                },
+                {
+                    "blank": 21,
+                    "code": 111,
+                    "comment": 0,
+                    "filename": "src/main.c"
+                },
+                {
+                    "blank": 59,
+                    "code": 252,
+                    "comment": 0,
+                    "filename": "src/math/vec.c"
+                },
+                {
+                    "blank": 18,
+                    "code": 65,
+                    "comment": 1,
+                    "filename": "src/math/vec.h"
+                },
+                {
+                    "blank": 4,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src/mesh.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src/mesh.h"
+                },
+                {
+                    "blank": 2,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "src/parsers/obj_parser.h"
+                },
+                {
+                    "blank": 7,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src/shaders/model_shader.c"
+                },
+                {
+                    "blank": 33,
+                    "code": 140,
+                    "comment": 0,
+                    "filename": "src/shaders/shader.c"
+                },
+                {
+                    "blank": 8,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "src/shaders/shader.h"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "src/stb.c"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "src/texture.c"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "src/texture.h"
+                },
+                {
+                    "blank": 5,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "src/utils/file.c"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src/utils/file.h"
+                },
+                {
+                    "blank": 4,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src/utils/logging.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src/utils/logging.h"
+                },
+                {
+                    "blank": 6,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "src/utils/memory.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "src/utils/memory.h"
+                },
+                {
+                    "blank": 6,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src/utils/optional.h"
+                },
+                {
+                    "blank": 15,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "src/vao.c"
+                },
+                {
+                    "blank": 6,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src/vao.h"
+                }
+            ]
+        }
+    ]
+}
