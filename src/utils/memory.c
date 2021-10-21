@@ -6,7 +6,7 @@ typedef struct memory_stats {
 } memory_stats;
 
 static memory_stats stats;
-static const char* tags[M_NUM] = { "STRING", "MANAGED_PTR", "SHADER", "VAO", "TEXTURE", "MESH", "CAMERA", "UNUSED" };
+static const char* tags[M_NUM] = { "STRING", "MANAGED_PTR", "SHADER", "VAO", "TEXTURE", "MESH", "CAMERA", "LIGHT", "UNUSED" };
 
 void* bmalloc(u64 size, u16 type) {
     stats.allocated_size[type] += size;

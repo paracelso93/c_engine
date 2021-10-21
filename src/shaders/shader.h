@@ -5,6 +5,7 @@
 #include "../math/vec.h"
 #include "../utils/optional.h"
 #include "../utils/file.h"
+#include "../lights/lights.h"
 
 #define CHECK_SHADER_MISMATCH(shader, _type) if (shader->type != _type) { berror("Shader type mismatch."); return; }
 
@@ -21,9 +22,11 @@ typedef struct shader_t {
 
 typedef struct shader_model_t {
     u32 transform_location, samp_location, mvp_location, camera_position_location;
+    point_light_location_t point_light_location;
     mat4 current_transform, current_mvp;
     vec3 camera_position;
     u32 sampler;
+    point_light_t* current_light;
 } shader_model_t;
 
 
@@ -39,6 +42,6 @@ void shader_uniform_1i(u32 location, i32 value);
 void shader_bind_uniforms(shader_t* shader);
 void shader_unbind();
 
-void shader_load_model_shader(shader_t* shader, mat4 transform, mat4 mvp, u32 texture, vec3 camera_position);
+void shader_load_model_shader(shader_t* shader, mat4 transform, mat4 mvp, u32 texture, vec3 camera_position, point_light_t* light);
 void shader_setup_model_shader(shader_t* shader);
 void shader_bind_model_shader(shader_t* shader);

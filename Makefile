@@ -10,6 +10,7 @@ texture\
 utils/file\
 mesh\
 camera\
+lights/point_light\
 
 source_dir=src
 target_dir=build
@@ -32,6 +33,7 @@ utils/file.h\
 utils/optional.h\
 mesh.h\
 camera.h\
+lights/lights.h\
 
 includes_files_=$(patsubst %, $(source_dir)/%, $(include_files))
 

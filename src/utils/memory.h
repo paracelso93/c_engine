@@ -11,6 +11,7 @@ enum malloc_type {
     M_TEXTURE,
     M_MESH,
     M_CAMERA,
+    M_LIGHT,
     M_UNUSED,
     M_NUM
 };
