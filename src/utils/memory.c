@@ -25,7 +25,7 @@ void bfree(void* mem, u64 size, u16 type) {
 }
 
 void print_memory_stats() {
-#ifdef DEBUG_BUILD
+#ifdef BUILD_DEBUG 
     const u64 gib = 1024 * 1024 * 1024;
     const u64 mib = 1024 * 1024;
     const u64 kib = 1024;
