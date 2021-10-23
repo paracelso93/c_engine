@@ -220,6 +220,7 @@ mesh_t* parse_file_obj(const char* file_path) {
 }
 
 void test_string_funcs() {
+#ifdef BUILD_DEBUG
     char* balls = bmalloc(sizeof(char) * 20, M_STRING);
     balls[0] = ' ';
     balls[1] = 's';
@@ -262,12 +263,9 @@ void test_string_funcs() {
 
     
     string_array_t(20, 20) arr = string_split(sussiers, 20, ' ');
-    /*for (size_t i = 0; i < 20; ++i) {
-        if (strlen(arr.elements[i]) == 0) continue;
-        binfo("%s", arr.elements[i]);
-    }*/
 
     btest(strcmp(arr.elements[0], "sussy") == 0 && strcmp(arr.elements[1], "sus") == 0 && strcmp(arr.elements[2], "abc") == 0, 7);
 
     bfree(sussiers, sizeof(char) * 20, M_STRING);    
+#endif
 }

@@ -284,6 +284,7 @@ void print_mat4(mat4 val) {
 }
 
 void test_mat4() {
+#ifdef BUILD_DEBUG
     mat4 a = {  5, 1, 2, 3, 
                 0, 1, -1, 3,
                 -2, 0, 1 ,4,
@@ -308,5 +309,6 @@ void test_mat4() {
     btest(mat4_equal(mat4_translate(id, 0.4f, 0.2f, 0.9f), (mat4) {1.0, 0.0, 0.0, -0.6, 0.0, 1.0, 0.0, 0.6, 0.0, 0.0, 1.0, -1.5, 0.0, 0.0, 0.0, 1.0}), 3);
     
     btest(mat4_equal(mat4_rotate(mat4_identity(), M_PI / 6, 0, 0), (mat4) {1, 0, 0, 0, 0, 0.87, -0.5, 0, 0, 0.5, 0.87, 0, 0, 0, 0, 1}), 4);
+#endif
 }
 

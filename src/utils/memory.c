@@ -25,15 +25,57 @@ void bfree(void* mem, u64 size, u16 type) {
 }
 
 void print_memory_stats() {
+#ifdef DEBUG_BUILD
+    const u64 gib = 1024 * 1024 * 1024;
+    const u64 mib = 1024 * 1024;
+    const u64 kib = 1024;
+
     for (u32 i = 0; i < M_NUM; ++i) {
-        bdebug("[%s]: allocated: %llu, freed: %llu, memory: %llu",
-            tags[i], 
-            stats.allocated_size[i], 
-            stats.freed_size[i], 
-            stats.allocated_size[i] - stats.freed_size[i]
-        );
+        char unit[4] = "XiB";
+        f32 amount_allocated = 1.0f;
+        f32 amount_freed = 1.0f;
+        u64 allocated = stats.allocated_size[i];
+        u64 freed = stats.freed_size[i];
+        if (allocated >= gib) {
+            unit[0] = 'G';
+            amount_allocated = allocated / (f32)gib;
+            amount_freed = freed / (f32)gib;
+        } else if (allocated >= mib) {
+            unit[0] = 'M';
+            amount_allocated = allocated / (f32)mib;
+            amount_freed = freed / (f32)mib;
+        } else if (allocated >= kib) {
+            unit[0] = 'K';
+            amount_allocated = allocated / (f32)kib;
+            amount_freed = freed / (f32)kib;
+        } else {
+            unit[0] = 'B';
+            unit[1] = '\0';
+            amount_allocated = (f32)allocated;
+            amount_freed = (f32) freed;
+        }
+        if (allocated >= gib) {
+            unit[0] = 'G';
+            amount_allocated = allocated / (f32)gib;
+            amount_freed = freed / (f32)gib;
+        } else if (allocated >= mib) {
+            unit[0] = 'M';
+            amount_allocated = allocated / (f32)mib;
+            amount_freed = freed / (f32)mib;
+        } else if (allocated >= kib) {
+            unit[0] = 'k';
+            amount_allocated = allocated / (f32)kib;
+            amount_freed = freed / (f32)kib;
+        } else {
+            unit[0] = 'b';
+            unit[1] = '\0';
+            amount_allocated = (f32)allocated;
+            amount_freed = (f32) freed;
+        }
+        bdebug("%s: %.2f%s - %.2f%s -> %.2f%s", tags[i], amount_allocated, unit, amount_freed, unit, amount_allocated - amount_freed, unit);;
     }
     printf("\n");
+#endif
 }
 
 void managed_ptr_free(managed_ptr_t ptr) {
