@@ -11,6 +11,7 @@ utils/file\
 mesh\
 camera\
 lights/point_light\
+parsers/obj_parser\
 
 source_dir=src
 target_dir=build
@@ -34,6 +35,7 @@ utils/optional.h\
 mesh.h\
 camera.h\
 lights/lights.h\
+parsers/obj_parser.h\
 
 includes_files_=$(patsubst %, $(source_dir)/%, $(include_files))
 
