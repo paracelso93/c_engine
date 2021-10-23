@@ -53,12 +53,9 @@ f32* reorder_float_buffer(f32* buffer, size_t buffer_len, size_t buffer_stride, 
     f32* buffer_new = bmalloc(sizeof(f32) * buffer_len * buffer_stride, M_UNUSED);
     memset(buffer_new, 0, sizeof(f32) * buffer_len * buffer_stride);
     for (size_t i = 0; i < buffer_len; i ++) {
-        ////printf("indices: %u, ", indices[i]);
         for (size_t j = 0; j < buffer_stride; j++) {
             buffer_new[i * buffer_stride + j] = buffer[indices[i] * buffer_stride + j];
-            //printf("%f ", buffer_new[i * buffer_stride + j]);
         }
-        //printf("\n");
     }
 
     return buffer_new;
@@ -173,7 +170,6 @@ mesh_t* parse_file_obj(const char* file_path) {
         vertices_f_array[i * 3] = vertices[i].x;
         vertices_f_array[i * 3 + 1] = vertices[i].y;
         vertices_f_array[i * 3 + 2] = vertices[i].z;
-        printf("vertices[i]: %f, %f, %f\n", vertices[i].x, vertices[i].y, vertices[i].z);
     }
 
     f32 uvs_f_array[current_uv * 2];
@@ -193,9 +189,6 @@ mesh_t* parse_file_obj(const char* file_path) {
     f32* vertex_ordered = reorder_float_buffer(vertices_f_array, current_vertex_index, 3, vertex_indices);
     f32* uv_ordered = reorder_float_buffer(uvs_f_array, current_uv_index, 2, uv_indices); 
     f32* normals_ordered = reorder_float_buffer(normals_f_array, current_normal_index, 3, normal_indices); 
-    //print_float_buffer(vertex_ordered, current_vertex_index, 3);
-    //print_float_buffer(uv_ordered, current_vertex_index, 2);
-    //print_float_buffer(normals_ordered, current_vertex_index, 3);
 
     vertex_t vertices_final[MAX_VERTICES] = {0};
     for (size_t i = 0; i < current_vertex_index; ++i) {
@@ -209,16 +202,6 @@ mesh_t* parse_file_obj(const char* file_path) {
         vertices_final[i].uv.x = uv_ordered[i * 2];
         vertices_final[i].uv.y = uv_ordered[i * 2 + 1];
         vertices_final[i].color = WHITE;
-    
-        bdebug("vertex: {%f, %f, %f}, {%f, %f, %f}, {%f, %f}", 
-            vertices_final[i].position.x, 
-            vertices_final[i].position.y, 
-            vertices_final[i].position.z,
-            vertices_final[i].normal.x,
-            vertices_final[i].normal.y,
-            vertices_final[i].normal.z,
-            vertices_final[i].uv.x,
-            vertices_final[i].uv.y);
     } 
 
     managed_ptr(f32) float_array_final = vertex_get_float_array(vertices_final, MAX_VERTICES);
